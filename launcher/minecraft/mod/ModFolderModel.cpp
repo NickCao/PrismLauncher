@@ -285,7 +285,7 @@ auto ModFolderModel::allMods() -> QList<Mod*>
 {
     QList<Mod*> mods;
 
-    for (auto& res : qAsConst(m_resources)) {
+    for (auto& res : std::as_const(m_resources)) {
         mods.append(static_cast<Mod*>(res.get()));
     }
 
